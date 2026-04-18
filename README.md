@@ -250,20 +250,6 @@ The application starts at `http://localhost:8080`
 ```bash
 ./mvnw test
 ```
-
-### Enable H2 Console (Optional)
-
-Uncomment the following lines in `src/main/resources/application.properties`:
-
-```properties
-spring.h2.console.enabled=true
-spring.datasource.url=jdbc:h2:mem:testdb
-spring.datasource.username=devDB
-spring.datasource.password=dev123
-```
-
-Then open `http://localhost:8080/h2-console` in your browser.
-
 ---
 
 ## 👨‍💻 Author
