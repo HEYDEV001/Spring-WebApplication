@@ -10,7 +10,7 @@ A Java 21 backend web application built with **Spring Boot 3.5.4**, implementing
 
 ---
 
-## 📌 Project Objective
+##  Project Objective
 
 The goal of this project is to build and demonstrate a production-style Spring Boot REST API for learning purposes, covering:
 
@@ -24,7 +24,7 @@ The goal of this project is to build and demonstrate a production-style Spring B
 
 ---
 
-## 🏗️ Project Structure
+##  Project Structure
 
 ```
 Spring-WebApplication/
@@ -73,9 +73,9 @@ Spring-WebApplication/
 
 ---
 
-## ✨ Key Features
+##  Key Features
 
-### 🔁 Full CRUD REST API
+###  Full CRUD REST API
 
 Two complete resource endpoints are exposed:
 
@@ -104,7 +104,7 @@ Two complete resource endpoints are exposed:
 
 ---
 
-### 🏛️ Clean Layered Architecture
+###  Clean Layered Architecture
 
 Strict separation of concerns across three layers:
 
@@ -114,13 +114,13 @@ Strict separation of concerns across three layers:
 
 ---
 
-### 🗂️ DTO Pattern with ModelMapper
+###  DTO Pattern with ModelMapper
 
 `EmployeeDTO` and `DepartmentDTO` serve as the API's public contracts, fully decoupled from the JPA entity classes. A `ModelMapper` bean configured in `MapperConfig.java` is injected into both `EmployeeService` and `DepartmentService`, handling all DTO ↔ Entity conversions with a single `.map()` call.
 
 ---
 
-### ✅ Validation with Custom Annotations
+###  Validation with Custom Annotations
 
 Input is validated at the DTO level using Jakarta Bean Validation. Beyond standard constraints, two custom annotations were implemented from scratch:
 
@@ -134,7 +134,7 @@ Standard annotations used across DTOs: `@NotBlank`, `@Size(min, max)`, `@Email`,
 
 ---
 
-### 🌐 Global Exception Handling
+###  Global Exception Handling
 
 `CustomGlobalException` is annotated with `@RestControllerAdvice` and handles exceptions across all controllers, returning a consistent `ApiError` JSON structure:
 
@@ -146,25 +146,25 @@ Standard annotations used across DTOs: `@NotBlank`, `@Size(min, max)`, `@Email`,
 
 ---
 
-### 🔧 Partial Update via PATCH + Java Reflection
+###  Partial Update via PATCH + Java Reflection
 
 `PATCH /employee/{employeeId}` accepts a `Map<String, Object>` of only the fields the client wants to change. The service uses `ReflectionUtils.findField(EmployeeEntity.class, fieldName)` and `ReflectionUtils.setField(field, entity, value)` to apply changes dynamically — meaning only the provided fields are updated, with all others left untouched.
 
 ---
 
-### 💾 H2 In-Memory Database
+###  H2 In-Memory Database
 
 No external database setup is required. Spring Boot auto-configures an in-memory H2 instance on startup. The `application.properties` file also contains commented-out configuration for connecting to a persistent H2 file store, making it straightforward to switch persistence modes during development.
 
 ---
 
-### 🧩 Lombok for Boilerplate Elimination
+###  Lombok for Boilerplate Elimination
 
 All entity and DTO classes use `@Getter`, `@Setter`, `@NoArgsConstructor`, `@AllArgsConstructor`. `ApiError` uses `@Data` and `@Builder`. This eliminates hundreds of lines of boilerplate without sacrificing clarity.
 
 ---
 
-## ⚠️ Challenges Faced & Optimisations Made
+##  Challenges Faced & Optimisations Made
 
 ### 1. DTO ↔ Entity Conversion Boilerplate
 
@@ -206,7 +206,7 @@ All entity and DTO classes use `@Getter`, `@Setter`, `@NoArgsConstructor`, `@All
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Technology | Version | Purpose |
 |---|---|---|
@@ -223,7 +223,7 @@ All entity and DTO classes use `@Getter`, `@Setter`, `@NoArgsConstructor`, `@All
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -252,6 +252,6 @@ The application starts at `http://localhost:8080`
 ```
 ---
 
-## 👨‍💻 Author
+##  Author
 
 **Dev Pathak** — [HEYDEV001](https://github.com/HEYDEV001)
