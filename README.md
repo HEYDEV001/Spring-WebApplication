@@ -12,7 +12,7 @@ A Java 21 backend web application built with **Spring Boot 3.5.4**, implementing
 
 ## 📌 Project Objective
 
-The goal of this project is to build and demonstrate a production-style Spring Boot REST API covering:
+The goal of this project is to build and demonstrate a production-style Spring Boot REST API for learning purposes, covering:
 
 - CRUD operations for two domain entities: **Employee** and **Department**
 - Clean separation of concerns using Controller → Service → Repository layers
