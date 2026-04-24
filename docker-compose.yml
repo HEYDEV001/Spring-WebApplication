@@ -1,0 +1,14 @@
+services:
+  web-tutorial:
+    image: heydev001/web-application-tute:latest
+    container_name: web-tutorial
+    ports:
+      - "8080:8080"
+    networks:
+      - web-network
+
+networks:
+  web-network:
+
+
+volumes: {}
